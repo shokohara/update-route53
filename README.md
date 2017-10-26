@@ -6,4 +6,5 @@ AWS_ACCESS_KEY_ID=****
 AWS_SECRET_ACCESS_KEY=****
 ROUTE53_HOSTED_ZONE_ID=****
 ROUTE53_RECORD_SETS=[["www.github.com.", "A"], ["abc.github.com.", "A"]]
+INTERVAL='60 minutes'
 ```
