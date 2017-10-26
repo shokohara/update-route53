@@ -8,8 +8,10 @@ import pureconfig.error.ConfigReaderException
 import pureconfig.module.cats._
 import pureconfig.{CamelCase, ConfigFieldMapping, ProductHint}
 
+import scala.concurrent.duration.Duration
 
-final case class MyConfig(credential: CredentialConfig, route53: Route53Config)
+
+final case class MyConfig(credential: CredentialConfig, route53: Route53Config, interval: Duration)
 
 object MyConfig {
 

@@ -78,7 +78,8 @@ lazy val commonScalacOptions: Seq[String] = Seq(
   "-language:implicitConversions" // Allow definition of implicit functions called views
 ) ++ (if (strict) Seq("-Xfatal-warnings") else Seq.empty[String]) // Fail the compilation if there are any warnings.
 
-val pureconfig = "0.8.0"
+lazy val pureconfig = "0.8.0"
+lazy val akka = "2.5.6"
 
 libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-core" % catsVersion,
@@ -86,6 +87,8 @@ libraryDependencies ++= Seq(
   "com.amazonaws" % "aws-java-sdk-route53" % "1.11.220",
   "com.github.pureconfig" %% "pureconfig" % pureconfig,
   "com.github.pureconfig" %% "pureconfig-cats" % pureconfig,
+  "com.typesafe.akka" %% "akka-actor" % akka,
+  "com.typesafe.akka" %% "akka-testkit" % akka % Test,
   "ch.qos.logback" % "logback-classic" % "0.9.28",
   "com.github.seratch" %% "awscala" % "0.6.+",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2"
