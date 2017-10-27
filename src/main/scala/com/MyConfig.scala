@@ -5,11 +5,10 @@ import com.MyConfig.{CredentialConfig, Route53Config}
 import com.amazonaws.regions.Regions
 import com.amazonaws.services.route53.model.RRType
 import pureconfig.error.ConfigReaderException
-import pureconfig.module.cats._
 import pureconfig.{CamelCase, ConfigFieldMapping, ProductHint}
+import pureconfig.module.cats._
 
 import scala.concurrent.duration.Duration
-
 
 final case class MyConfig(credential: CredentialConfig, route53: Route53Config, interval: Duration)
 
